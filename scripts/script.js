@@ -13,7 +13,7 @@ const form = document.querySelector('form');
 
 const cardTmp = document.querySelector('.cards-list-item-template');
 const preloaderTmp = document.querySelector('.preloader-template');
-const videoNotFoundTmp = document.querySelector('.error-template');
+const videoNotFoundTmp = document.querySelector('.errorstemplate');
 const moreButtonTmp = document.querySelector('.more-button-template');
 
 
@@ -29,7 +29,7 @@ form.onsubmit = (e) => {
   e.preventDefault();
   cardsContainer.textContent = '';
   [...videoContainer.children].forEach((el) => {
-    el.className === 'error' && el.remove();
+    el.className === 'errors' && el.remove();
   });
   showPreloader(preloaderTmp, videoContainer);
   showPreloader(preloaderTmp, cardsContainer);
@@ -226,7 +226,7 @@ function chooseCurrentVideo({
 
 function showError(container, errorTemplate, errorMessage) {
   const node = errorTemplate.content.cloneNode(true);
-  node.querySelector('.error__title').textContent = errorMessage;
+  node.querySelector('.errorstitle').textContent = errorMessage;
   container.append(node);
   console.log('показал, ошибку');
 }
