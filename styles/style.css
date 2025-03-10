@@ -1,0 +1,284 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  block-size: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+blockquote,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  inline-size: 1px;
+  block-size: 1px;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  color: #fff;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  background-color: #1b1919;
+  inline-size: 1200px;
+  block-size: 100%;
+}
+
+.content {
+  display: flex;
+  align-items: flex-end;
+  gap: 32px;
+  max-inline-size: 1140px;
+}
+
+.video-container {
+  position: relative;
+  margin-block-end: 16px;
+  inline-size: 711px;
+  block-size: 386px;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.formfieldset {
+  border: none;
+}
+
+.formfieldsettitle {
+  margin-block-end: 7.5px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 122%;
+}
+
+.formlabel {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  inline-size: fit-content;
+}
+
+.formtextfield {
+  border-inline-start: 1px transparent;
+  border-inline-end: 1px transparent;
+  border-block-start: 1px solid rgb(255, 255, 255);
+  border-block-end: 1px solid rgb(255, 255, 255);
+  padding-block-start: 3px;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  background-color: rgb(27, 25, 25);
+  inline-size: 225px;
+  appearance: none;
+}
+
+.searchformtextfield::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.searchformtextfield:active {
+  border-inline-start: 1px solid rgb(255, 255, 255);
+  border-inline-end: 1px solid rgb(255, 255, 255);;
+}
+
+.formtextfield:focus {
+  outline: none;
+}
+
+.formlabel:has(:focus-visible) {
+  outline: 1px solid rgb(255, 255, 255);
+  outline-offset: 2px;
+}
+
+.formcheckboxlist {
+  display: flex;
+  gap: 15px;
+}
+
+.formpseudocheckbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 19px;
+  height: 19px;
+  margin-inline-end: 5px;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.formlabel:hover .formlabeltext {
+  text-decoration: underline;
+}
+
+.formcheckbox:checked + .formpseudocheckbox::after {
+  content: '';
+  display: block;
+  background-color: rgb(255, 255, 255);
+  inline-size: 15px;
+  block-size: 15px;
+}
+
+.button {
+  border: 1px solid rgb(255, 255, 255);
+  color: inherit;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 122%;
+  background-color: rgb(27, 25, 25);
+  cursor: pointer;
+  block-size: 34px;
+}
+
+.button:active {
+  background-color: rgb(84, 80, 80);
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 1px solid rgb(255, 255, 255);
+  outline-offset: 2px;
+}
+
+.formsubmitbutton {
+  margin-block-start: 20px;
+  inline-size: 194px;
+}
+
+.title {
+  margin-block-end: 24px;
+  font-family: Oswald, sans-serif;
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 94%;
+  text-transform: uppercase;
+}
+
+.accent {
+  color: rgb(84, 80, 80);
+}
+
+.list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  block-size: 300px;
+}
+
+.listitem:not(:last-child) {
+  margin-block-end: 30px;
+}
+
+.cardlink {
+  margin-block: 1px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.cardlink:active {
+  background-color: rgb(84, 80, 80);
+}
+
+.cardlink:hover {
+  text-decoration: underline;
+}
+
+.cardlink:focus {
+  outline: none;
+}
+
+.cardlink:focus-visible {
+  outline: 1px solid rgb(255, 255, 255);
+}
+
+.cardlinkcurrent {
+  display: block;
+  background-color: rgb(84, 80, 80);
+}
+
+.videocard {
+  display: flex;
+  justify-content: space-between;
+}
+
+.videocarddescriptioncontainer {
+  flex-grow: 1;
+  inline-size: 200px;
+}
+
+.videocardtitle {
+  padding: 4px 0;
+  overflow: hidden;
+  font-family: Oswald, sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 100%;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.videocarddescription {
+  display: -webkit-box;
+  overflow: hidden;
+  font-size: 18px;
+  line-height: 90%;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
+.videocardthumbnail {
+  object-fit: cover;
+  object-position: center;
+  block-size: 103px;
+  inline-size: 194px;
+}
+
+.more-button {
+  width: 100%;
+}

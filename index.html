@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Посмотри в окно</title>
+    <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/preloader.css" />
+    <link rel="stylesheet" href="./styles/errors.css" />
+  </head>
+  <body class="page">
+    <main class="content">
+      <section class="result">
+        <div class="video-container">
+          <video src="" controls class="video" poster=""></video>
+        </div>
+        <form class="form">
+          <fieldset class="formfieldset">
+            <h2 class="formfieldsettitle">Город</h2>
+            <label class="formlabel">
+              <span class="formlabeltext visually-hidden">Город</span>
+              <input
+                type="text"
+                placeholder="Санкт Петербург, например"
+                name="city"
+                class="formtextfield"
+              />
+            </label>
+          </fieldset>
+          <fieldset class="formfieldset">
+            <h2 class="formfieldsettitle">Время суток</h2>
+            <div class="formcheckboxlist">
+              <label class="formlabel">
+                <input
+                  type="checkbox"
+                  name="time"
+                  value="morning"
+                  class="formcheckbox visually-hidden"
+                />
+                <span class="formpseudocheckbox"></span>
+                <span class="formlabeltext">Утро</span>
+              </label>
+              <label class="formlabel">
+                <input
+                  type="checkbox"
+                  name="time"
+                  value="afternoon"
+                  class="formcheckbox visually-hidden"
+                />
+                <span class="formpseudocheckbox"></span>
+                <span class="formlabeltext">День</span>
+              </label>
+              <label class="formlabel">
+                <input
+                  type="checkbox"
+                  name="time"
+                  value="night"
+                  class="formcheckbox visually-hidden"
+                />
+                <span class="formpseudocheckbox"></span>
+                <span class="formlabeltext">Ночь</span>
+              </label>
+            </div>
+          </fieldset>
+          <button type="submit" class="button formsubmitbutton">
+            Найти
+          </button>
+        </form>
+      </section>
+      <section class="details">
+        <h1 class="title">
+          <span class="accent">По-</span><br />смотри<br />в окно
+        </h1>
+        <ul class="list">
+          
+        </ul>
+      </section>
+    </main>
+
+
+    <template class="preloader-template">
+      <div class="preloader">
+        <div class="preloader-chasing-squares">
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+        </div>
+      </div>
+    </template>
+
+    <template class="cards-list-item-template">
+      <li class="listitem">
+        <a href="#0" class="cardlink">
+          <article class="videocard">
+            <div class="videocarddescriptioncontainer">
+              <h2 class="videocardtitle"></h2>
+              <p class="videocarddescription"></p>
+            </div>
+            <img src="" alt="" class="videocardthumbnail" />
+          </article>
+        </a>
+      </li>
+    </template>
+    <template class="more-button-template">
+      <li><button class="button more-button">Показать ещё</button></li>
+    </template>
+
+    <template class="errorstemplate">
+      <div class="errors">
+        <h2 class="errorstitle"></h2>
+      </div>
+    </template>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
